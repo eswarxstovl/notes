@@ -1,0 +1,31 @@
+{
+    "Version": "2012-10-17",
+    "Id": "",
+    "Statement": [
+        {
+            "Sid": "Object Level Permissions",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::585785618606:role/service-role/s3crr_role_for_xceedhire_1"
+            },
+            "Action": [
+                "s3:Replicate0bject",
+                "s3:ReplicateDelete"
+            ],
+            "Resource": "arn:aws:s3:::xceedhire-dev/*"
+        },
+        {
+            "Sid": "Bucket Level Permissions",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::585785618606:role/service-role/s3crr_role_for_xceedhire_1"
+            },
+            "Action": [
+                "s3:List*",
+                "s3:GetBucketVersioning",
+                "s3:PutBucketVersioning"
+            ],
+            "Resource": "arn:aws:s3:::xceedhire-dev"
+        }
+    ]
+}
