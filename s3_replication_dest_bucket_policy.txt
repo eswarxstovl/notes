@@ -9,7 +9,7 @@
                 "AWS": "arn:aws:iam::585785618606:role/service-role/s3crr_role_for_xceedhire_1"
             },
             "Action": [
-                "s3:Replicate0bject",
+                "s3:ReplicateObject",
                 "s3:ReplicateDelete"
             ],
             "Resource": "arn:aws:s3:::xceedhire-dev/*"
